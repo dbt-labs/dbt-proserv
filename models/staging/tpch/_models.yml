@@ -1,0 +1,84 @@
+version: 2
+
+models:
+ 
+  - name: base_tpch__nations
+    description: >
+      Staging layer for nations data
+    columns:
+      - name: nation_id
+        tests:
+          - unique
+          - not_null   
+
+  - name: base_tpch__regions
+    description: >
+      Staging layer for regions data
+    columns:
+      - name: region_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_tpch__locations
+    description: >
+      Staging layer for location data
+    columns:
+      - name: location_sk
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_tpch__customers
+    description: >
+      Staging layer for customers data
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_tpch__line_items
+    description: >
+      Staging layer for line items data
+    columns:
+      - name: order_item_sk
+        tests:
+          - unique
+          - not_null
+ 
+  - name: stg_tpch__orders
+    description: >
+      Staging layer for orders data
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_tpch__part_suppliers
+    description: >
+      Staging layer for suppliers data
+    columns:
+      - name: part_supplier_sk
+        tests:
+          - unique
+          - not_null
+            
+  - name: stg_tpch__parts
+    description: >
+      Staging layer for parts data
+    columns:
+      - name: part_id
+        tests:
+          - unique
+          - not_null
+          
+  - name: stg_tpch__suppliers
+    description: >
+      Staging layer for suppliers data
+    columns:
+      - name: supplier_id
+        tests:
+          - unique
+          - not_null

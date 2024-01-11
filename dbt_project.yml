@@ -1,0 +1,29 @@
+
+name: dbt_snowflake_demo
+version: 1.0.0
+config-version: 2
+
+dbt-cloud: 
+    project-id: 248848
+    defer-env-id: 198716
+
+profile: snowflake_demo_profile
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["data"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:         
+    - "dbt_modules"
+
+seeds:
+  +quote_columns: false
+
+models:
+  dbt_snowflake_demo:
+      marts:
+          +materialized: table

@@ -1,0 +1,39 @@
+version: 2
+
+models:
+
+  - name: dim_parts
+    description: >
+      Parts dimensions table
+    columns:
+      - name: part_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_suppliers
+    description: >
+      Suppliers dimensions table
+    columns:
+      - name: supplier_id
+        tests:
+          - unique
+          - not_null
+ 
+  - name: fct_order_items
+    description: >
+      Order items fact table
+    columns:
+      - name: order_item_sk
+        tests:
+          - unique
+          - not_null
+  
+  - name: fct_orders
+    description: >
+      Orders fact table
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
