@@ -1,5 +1,5 @@
 
-name: dbt_snowflake_demo
+name: dbt_proserv
 version: 1.0.0
 config-version: 2
 
@@ -24,6 +24,6 @@ seeds:
   +quote_columns: false
 
 models:
-  dbt_snowflake_demo:
+  dbt_proserv:
       marts:
           +materialized: table
