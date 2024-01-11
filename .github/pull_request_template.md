@@ -40,7 +40,9 @@ addressed, and remove any items that are not relevant to this PR.
 -->
 - [ ] My pull request represents one logical piece of work.
 - [ ] My commits are related to the pull request and look clean.
-- [ ] My SQL follows the [dbt Labs style guide](https://github.com/dbt-labs/corp/blob/master/dbt_style_guide.md).
+- [ ] My SQL follows the [dbt Labs ProServ style guide](https://github.com/dbt-labs/dbt-proserv/blob/main/dbt_proserv_style_guide.md).
 - [ ] I have materialized my models appropriately.
 - [ ] I have added appropriate tests and documentation to any new models.
 - [ ] I have updated the README file.
+- [ ] Redshift only: I have verified any late-binding views by running a select statement against any views created.
+- [ ] Redshift only: I have considered or applied sort or dist configurations for long-running and ending models to optimize run time.
