@@ -1,0 +1,3 @@
+export DBT_CLOUD_URL="emea.dbt.com"
+export DBT_CLOUD_ACCOUNT_ID=31
+export DBT_CLOUD_API_KEY="your-api-key"

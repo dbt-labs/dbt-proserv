@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "dlt-dbt-cloud"
+version = "0.1.0"
+description = ""
+authors = ["Benoit Perigaud <8754100+b-per@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "<3.13,>=3.8.1"
+dlt = {extras = ["duckdb"], version = "^0.4.8"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
