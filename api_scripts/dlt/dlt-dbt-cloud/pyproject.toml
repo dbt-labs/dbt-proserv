@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "<3.13,>=3.8.1"
-dlt = {extras = ["duckdb"], version = "^0.4.8"}
+dlt = {extras = ["duckdb"], version = "^0.4.9"}
 
 
 [build-system]
