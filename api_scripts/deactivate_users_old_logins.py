@@ -2,6 +2,8 @@ from datetime import datetime
 import requests
 import logging
 
+INACTIVE_STATE = 2
+
 API_KEY = "TBD"
 ACCOUNT_ID = TBD
 HOST = "cloud.getdbt.com"
@@ -122,7 +124,7 @@ def deactivate_user(
         "account_id": account_id,
         "id": permission_id,
         "user_id": user_id,
-        "state": 2,
+        "state": INACTIVE_STATE,
     }
 
     delete_perm = requests.post(
