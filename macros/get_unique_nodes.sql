@@ -27,14 +27,18 @@
             {{ exceptions.raise_compiler_error("Invalid type input: `" ~ type ~ "`. Type should be one of ['model', 'test', 'snapshot', 'seed', 'source', 'snapshot']") }}
         {%- endif %}
 
-        -- return nodes for sql where clause
-        (
-        {%- for unique_node in unique_nodes %}
-            '{{ unique_node }}' {%- if not loop.last %},{% endif -%}
-        {%- endfor %}
-        )
+        {% if unique_nodes | length > 0 %}        
+            -- return nodes for sql where clause
+            (
+            {%- for unique_node in unique_nodes %}
+                '{{ unique_node }}' {%- if not loop.last %},{% endif -%}
+            {%- endfor %}
+            )
+        {% else %}
+            ('no_nodes_of_this_type')
+        {% endif %}
     {% else %}
-        {{ (true) }}
+        (true)
     {% endif %}
 
 
