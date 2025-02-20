@@ -34,14 +34,14 @@ def get_page_users_old_login(
     users_old_login = []
     for user in users["data"]:
         last_login_date_time_str = user["last_login"][:19]
-        last_login = datetime.strptime(last_login_date_time_str, "%Y-%m-%dT%H:%M:%S")
+        last_login = datetime.strptime(last_login_date_time_str, "%Y-%m-%d %H:%M:%S")
         if (datetime.now() - last_login).days > days_since_last_login:
             users_old_login.append(user)
 
     last_login_from_list_str = (
-        users["data"][-1]["last_login"][:19] if users["data"] else "2024-01-01T00:00:00"
+        users["data"][-1]["last_login"][:19] if users["data"] else "2024-01-01 00:00:00"
     )
-    last_login_from_list = datetime.strptime(last_login_from_list_str, "%Y-%m-%dT%H:%M:%S")
+    last_login_from_list = datetime.strptime(last_login_from_list_str, "%Y-%m-%d %H:%M:%S")
 
     return (
         users_old_login,
