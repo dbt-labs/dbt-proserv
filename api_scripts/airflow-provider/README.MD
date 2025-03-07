@@ -42,9 +42,10 @@ with DAG(
 
 ## Requirements
 
-Having the exising provider `apache-airflow-providers-dbt-cloud` installed with a version >= 4.2.0
+- having the exising provider `apache-airflow-providers-dbt-cloud` installed with a version >= 4.2.0
+- providing the permission to create jobs to the service token
 
 ## Installation
 
-Just copy paste the code into your `dags` folder and import it in your other DAG files (see example above).
+Just copy paste the code in `dbt_cloud_run_job_create_operator.py` into your `dags` folder and import it in your other DAG files (see example above).
 
