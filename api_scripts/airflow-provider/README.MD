@@ -2,7 +2,7 @@
 
 This code contains a new operator called `DbtCloudRunJobCreateOperator`.
 
-It accepts all the same arguments as `DbtCloudRunJobOperator` from the dbt Cloud provider but if the parameters provided are `project_name`, `environment_name` and `job_name` and no job exists with this name, it will create the the job in the relevant project and environment before running it. Next time the DAG is run, it will pick the existing job and not create a new one.
+It accepts all the same arguments as [`DbtCloudRunJobOperator` from the dbt Cloud provider](https://airflow.apache.org/docs/apache-airflow-providers-dbt-cloud/stable/operators.html#trigger-a-dbt-cloud-job) but if the parameters provided are `project_name`, `environment_name` and `job_name` and no job exists with this name, it will create the the job in the relevant project and environment before running it. Next time the DAG is run, it will pick the existing job and not create a new one.
 
 `default_steps_on_create` is an additional parameter that can be set to configure what steps would be set in the job if it is created by the Operator.
 
