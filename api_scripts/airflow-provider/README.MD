@@ -8,7 +8,7 @@ It accepts all the same arguments as [`DbtCloudRunJobOperator` from the dbt Clou
 
 ## Example
 
-Here is an example of DAG calling this opertator
+Here is an example of DAG calling this operator
 
 ```python
 from datetime import datetime
