@@ -20,6 +20,10 @@ target-path: "target"
 clean-targets:         
     - "dbt_modules"
 
+vars:
+  dbt_artifacts:
+    +schema: dbt_artifacts_proserv
+
 seeds:
   +quote_columns: false
 
@@ -27,3 +31,6 @@ models:
   dbt_proserv:
       marts:
           +materialized: table
+
+on-run-end:
+  - "{{ dbt_artifacts.upload_results(results) }}"  # dbt_artifacts (or dbt_artifacts_less)

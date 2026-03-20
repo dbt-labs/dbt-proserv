@@ -1,0 +1,8 @@
+packages:
+  - package: dbt-labs/dbt_utils
+    version: 1.0.0
+  - package: dbt-labs/audit_helper
+    version: 0.7.0
+  - git: https://github.com/dbt-labs/dbt-artifacts-less.git
+    revision: 077e91b7543ae701c95ead3a9783fa5131b88880
+sha1_hash: 6ea4ccf5c7abcb108ae7984bf885c4ca81d4cabb

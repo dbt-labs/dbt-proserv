@@ -3,3 +3,5 @@ packages:
     version: 1.0.0
   - package: dbt-labs/audit_helper
     version: 0.7.0
+  - git: "https://github.com/dbt-labs/dbt-artifacts-less.git" # git URL
+    revision: "main"
